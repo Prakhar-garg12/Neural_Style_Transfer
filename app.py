@@ -31,9 +31,9 @@ class UploadForm(FlaskForm):
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-encoder = VGGEncoder('vgg_normalised.pth').to(device)
+encoder = VGGEncoder('./vgg_normalised.pth').to(device)
 decoder = Decoder().to(device)
-decoder.load_state_dict(torch.load('D:/Neural_Style_Transfer/experiment/final_exp/decoder_final.pth'))
+decoder.load_state_dict(torch.load('decoder_final.pth', map_location=device))
 
 encoder.eval()
 decoder.eval()
@@ -142,6 +142,10 @@ def send_image(filename):
 def send_example(filename):
     return send_from_directory('examples', filename)
 
-if __name__=='__main__':
-    from werkzeug.serving import run_simple
-    run_simple('localhost', 5000, app, use_reloader=True, use_debugger=True)
+# if __name__=='__main__':
+#     from werkzeug.serving import run_simple
+#     run_simple('localhost', 5000, app, use_reloader=True, use_debugger=True)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
