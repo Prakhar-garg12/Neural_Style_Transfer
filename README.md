@@ -6,6 +6,15 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.x-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Flask](https://img.shields.io/badge/Flask-Web%20App-000000?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Render-46E3B7?logo=render&logoColor=white)](https://neural-style-transfer-9wly.onrender.com/)
+
+---
+
+## 🌐 Live Demo
+
+**Try it out here → [https://neural-style-transfer-9wly.onrender.com/](https://neural-style-transfer-9wly.onrender.com/)**
+
+> ⚠️ Hosted on Render's free tier — the app may take ~30 seconds to wake up on first visit.
 
 ---
 
