@@ -128,10 +128,10 @@ def index():
             except Exception as e:
                 print("ERROR:", e)
                 error = str(e)
-    else:
-        if not content_filename:
+    elif form.is_submitted():
+        if not form.content.data:
             error = 'Please upload content image'
-        if not style_filename:
+        elif not form.style.data:
             error = 'Please upload style image'
 
     return render_template('index.html', form=form, result_image = result_image, content_image=content_filename, style_image = style_filename, error = error)
